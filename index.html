@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+ <script src="https://unpkg.com/scrollreveal"></script>
+  <title>HUSTLERS</title>
+  <!--scroolrevel for animations-->
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white">
+
+  <header class="bg-gray-500">
+    <nav class="flex items-center justify-between px-12 h-16 text-lg lg:gap-8" >
+      <!--whitespace nowrap for not letting line out to next-->
+      <a href="#" class="text-3xl font-bold border-2 px-2 py-2 rounded-md whitespace-nowrap">HUSTLERS</a>
+     <div class=" dropdown-menu absolute -top-full left-0  max-lg:bg-gray-500 w-full flex flex-col gap-6 items-center lg:static lg:flex-row lg:justify-between"><!--for giving position to other with respect to this-->
+      <ul class="flex flex-col items-center gap-6  lg:flex-row lg:gap-8 lg:justify-between ml-10">
+        <li class="hover:text-orange-400 ">Locations</li>
+        <li class="hover:text-orange-400">offerings</li>
+        <li class="hover:text-orange-400">Pricing</li>
+        <li class="hover:text-orange-400">About</li>
+      </ul>
+  
+      <div class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8 lg:justify-between">
+        <button class="bg-orange-500 px-2 py-1 rounded-md">Login</button>
+        <button class="bg-orange-500 px-2 py-1 rounded-md">Sign Up</button></div>
+     </div>
+  
+     <div class="toogle-button lg:hidden"><!-- for large scrreen lg:hideen-->
+      <i class="  fa-solid fa-bars fa-lg"></i></div><!--to make this icon functional we will add some javascript to it-->
+    </nav>
+    
+  </header>
+  <main class="lg:flex ">
+    <div class="flex items-center justify-center my-10 lg:flex-1  lg:order-2">
+      <img src="img1.jpg" class="h-96 w-96  shadow-white rounded-md outline outline-black lg:rounded-full lg:h-[600px] lg:w-[600px] image-transform">
+
+    </div>
+
+    <div class="lg:order-1 lg:my-32  text-transform">
+      <div class=" flex flex-col items-center justify-center text-5xl font-extrabold lg:flex-1 my-10">
+        <h1>Let's Switch</h1>
+        <h1>To Remote</h1>
+      </div>
+      <p class="text-lg flex flex-col items-center justify-center mx-10 my-5">
+        HUSTLERS is an outcome-focused, job platform for techies looking for jobs in various Places .
+      </p>
+  
+      <form action="" class="flex flex-col gap-2 items-center justify-center  md:flex-row md:gap-0">
+        <input type="text" placeholder="Enter City" class=" max-md:rounded-md md:rounded-l-md px-2 py-2 w-96 flex items-center justify-center" >
+        <button class="bg-orange-700 w-96 md:w-80 h-10 max-md:rounded-md  md:rounded-r-md whitespace-nowrap">Find Your Office</button>
+      </form>
+    </div>
+  </main>
+  <script>
+    let tooglebtn=document.querySelector(".toogle-button");
+    let dropdown=document.querySelector(".dropdown-menu");
+
+    tooglebtn.addEventListener("click",function(){
+      dropdown.classList.toggle("top-16");
+    })
+
+    let scroll=ScrollReveal({
+      reset:true,
+      duration:2500,
+      distance:'60px'
+
+
+    })
+
+    scroll.reveal('.image-transform',{delay:400,origin:'top'})
+    scroll.reveal('.text-transform',{delay:300,origin:'left'})
+  </script>
+
+  
+</body>
+</html>
